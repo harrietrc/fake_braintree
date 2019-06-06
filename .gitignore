@@ -1,7 +1,5 @@
-*.gem
 .bundle
 Gemfile.lock
-pkg/*
 tmp/
 tags
 .ruby-version
