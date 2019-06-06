@@ -51,7 +51,7 @@ module FakeBraintree
         'discounts' => discounts,
         'next_billing_date' => next_billing_date,
         'billing_day_of_month' => billing_day_of_month,
-            'billing_period_start_date' => billing_period_start_date,
+        'billing_period_start_date' => billing_period_start_date,
         'billing_period_end_date' => billing_period_end_date,
         'paid_through_date' => paid_through_date,
         'first_billing_date' => first_billing_date,
