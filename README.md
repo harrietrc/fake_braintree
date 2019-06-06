@@ -1,3 +1,17 @@
+# Build instructions (Centos 7)
+
+`sudo yum install -y qt5-qtbase`
+`sudo yum install -y qt5-qtwebkit-devel`
+
+If you get errors relating to the qtbase version:
+
+1. `sudo yum install -y qt5-qtbase`
+2. Install ICU according to [these instructions](http://www.linuxfromscratch.org/blfs/view/8.1/general/icu.html)
+
+`QMAKE=/usr/lib64/qt5/bin/qmake gem install capybara-webkit`
+`echo 'PATH=/usr/lib64/qt5/bin:$PATH' >> ~/.bash_profile`
+`. ~/.bash_profile`
+
 # New maintainer
 
 [thoughtbot](https://github.com/thoughtbot) stopped using Braintree but wanted this library to live on.
