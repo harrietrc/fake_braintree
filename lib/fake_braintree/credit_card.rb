@@ -20,7 +20,9 @@ module FakeBraintree
         if token.nil?
           @credit_card['token'] = generate_token
         end
-        @credit_card['created_at'] = Time.now
+        @credit_card['created_at'] = Date.today
+        @credit_card['updated_at'] = Date.today
+        @credit_card['image_url'] = ''
         FakeBraintree.registry.credit_cards[token] = @credit_card
         if customer = FakeBraintree.registry.customers[@credit_card['customer_id']]
           customer['credit_cards'] << @credit_card

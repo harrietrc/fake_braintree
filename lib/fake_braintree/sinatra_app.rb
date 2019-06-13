@@ -10,6 +10,7 @@ require 'fake_braintree/transaction'
 require 'fake_braintree/client_token'
 require 'fake_braintree/credit_card_serializer'
 require 'fake_braintree/merchant_account'
+require 'fake_braintree/setup_helpers'
 
 module FakeBraintree
   class SinatraApp < Sinatra::Base
@@ -21,6 +22,7 @@ module FakeBraintree
     disable :logging
 
     include Helpers
+    include SetupHelpers
 
     helpers do
       def hash_from_request_body_with_key(key)
@@ -88,6 +90,7 @@ module FakeBraintree
 
     # Braintree::Customer.find
     get '/merchants/:merchant_id/customers/:id' do
+      create_customer_if_test_user(params[:id], {merchant_id: params[:merchant_id]})
       customer = FakeBraintree.registry.customers[params[:id]]
       if customer
         gzipped_response(200, customer.to_xml(root: 'customer'))
