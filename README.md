@@ -1,6 +1,8 @@
 # Notes about this fork
 
-The additions I've made so far are generic to Braintree. If this changes, and any company-specific data is introduced, this fork should be [mirrored and made private](https://help.github.com/en/articles/duplicating-a-repository) first.
+~~The additions I've made so far are generic to Braintree~~*. If this changes, and any company-specific data is introduced, this fork should be [mirrored and made private](https://help.github.com/en/articles/duplicating-a-repository) first.
+
+* This is no longer true, as my most recent commit exposed some of our DB schema. I've duplicated this repository as https://github.com/harrietrc/braintree-fake (private).
 
 ---
 
