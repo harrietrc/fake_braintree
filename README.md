@@ -1,3 +1,9 @@
+# Notes about this fork
+
+The additions I've made so far are generic to Braintree. If this changes, and any company-specific data is introduced, this fork should be [mirrored and made private](https://help.github.com/en/articles/duplicating-a-repository) first.
+
+---
+
 # New maintainer
 
 [thoughtbot](https://github.com/thoughtbot) stopped using Braintree but wanted this library to live on.
